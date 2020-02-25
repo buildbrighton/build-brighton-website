@@ -1,7 +1,7 @@
 module.exports = {
   plugins: {
       '@fullhuman/postcss-purgecss': {
-          content: ['layouts/**/*.html'],
+          content: ['content/**/*.html', 'layouts/**/*.html'],
           whitelist: [
               'highlight',
               'language-bash',

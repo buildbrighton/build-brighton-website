@@ -4,10 +4,30 @@
 // Include just the Bulma elements we require.
 @import "bulma/bulma"
 
-// Make code a bit smaller on mobile.
-+touch
-  pre
-    font-size: $size-small
-.is-medium
-  pre
-    font-size: $size-normal
+/**
+ * Hamburger menu
+ **/
+// Center align the members area and join buttons
+.navbar-menu.is-active
+  .navbar-end
+    display: flex
+    justify-content: center
+
+/**
+ * Homepage
+ **/
+.homepage-hero
+  .hero-body
+    // Set the padding for the homepage hero so the slogan text is nicely centered
+    padding: 3rem 3rem
+    @media screen and (min-width: $tablet)
+      padding: 3rem 7rem
+    @media screen and (min-width: $desktop)
+      padding: 7rem 10rem
+
+    // Set the styling of the slogan text
+    p.slogan
+      text-align: center
+      font-size: $size-4
+      font-weight: $weight-light
+      line-height: $size-3
