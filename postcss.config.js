@@ -12,7 +12,8 @@ module.exports = {
               'h3',
               'h4',
               'ul',
-              'li'
+              'li',
+              'is-active'
           ]
       },
       autoprefixer: {},

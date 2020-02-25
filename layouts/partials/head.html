@@ -1,6 +1,6 @@
 {{ $options := (dict "outputStyle" "compressed") }}
 {{ $sass := resources.Get "css/site.sass" }}
-{{ .Scratch.Set "sass" ($sass | resources.ToCSS $options | postCSS | resources.Minify | resources.Fingerprint "sha512") }}
+{{ .Scratch.Set "sass" ($sass | resources.ToCSS $options | resources.Minify | resources.PostCSS | resources.Fingerprint "sha512") }}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
