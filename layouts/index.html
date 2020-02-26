@@ -21,11 +21,32 @@
       {{ if ne .Name "hero.md" }}
         <section class="section">
           <div class="container">
-            <h2 class="title">{{ .Title }}</h2>
-            <div {{ if .Params.markdown }}class="content"{{ end }}>{{ .Content }}</div>
+            {{ if .Params.markdown }}
+            <div class="columns is-desktop">
+              <div class="column is-two-thirds is-offset-2">
+                  <h2 class="title">{{ .Title }}</h2>
+                  <div class="content">{{ .Content }}</div>
+                </div>
+              </div>
+            {{ else }}
+              <h2 class="title">{{ .Title }}</h2>
+              {{ .Content }}
+            {{ end }}
           </div>
         </section>
       {{ end }}
     {{ end }}
   {{ end }}
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-desktop">
+        <div class="column is-two-thirds is-offset-2">
+          <h2 class="title">Contact Us</h2>
+          
+          {{ partial "contact-form" }}
+        </div>
+      </div>
+    </div>
+  </div>
 {{ end }}

@@ -1,0 +1,37 @@
+<form name="contact" method="POST" data-netlify="true" netlify-honeypot="additional-field">
+  <div class="columns">
+    <div class="column">
+      <div class="field">
+        <label class="label" for="name">Name</label>
+        <div class="control">
+          <input id="name" name="name" class="input" type="text" placeholder="">
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="field">
+        <label class="label" for="email">Email</label>
+        <div class="control">
+          <input id="email" name="email" class="input" type="email" placeholder="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="field">
+    <label class="label" for="message">Message</label>
+    <div class="control">
+      <textarea id="message" name="message" class="textarea" placeholder=""></textarea>
+    </div>
+  </div>
+
+  <p class="is-hidden">
+    <label for="additional-field">Don’t fill this out if you're human</label>
+    <input id="additional-field" name="additional-field">
+  </p>
+
+  <div class="control">
+    <button class="button is-primary" type="submit">Submit</button>
+  </div>
+</form>
