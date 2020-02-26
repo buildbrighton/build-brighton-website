@@ -1,4 +1,4 @@
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+<nav class="navbar" role="navigation" aria-label="main navigation">
   <section class="container">
     <div class="navbar-brand">
       <a class="navbar-item" href="{{ $.Site.Home.Permalink }}">
@@ -13,27 +13,26 @@
     
     <div id="mainNavbar" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item">
-          About Us
-        </a>
-        <a class="navbar-item">
-          The Space
-        </a>
-        <a class="navbar-item">
-          Visit Us
-        </a>
-        <a class="navbar-item">
-          FAQs
-        </a>
+        {{ with .Site.GetPage "/home" }}
+          {{ $pages := .Resources.ByType "page" }}
+
+          {{ range sort $pages "Params.weight" }}
+            {{ if .Params.anchor }}
+              <a class="navbar-item" href="/#{{ .Params.anchor }}">
+                {{ .Title }}
+              </a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
       </div>
   
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-primary">
+            <a class="button is-primary" href="{{ .Site.Params.bbmsURL }}">
               Members Area
             </a>
-            <a class="button">
+            <a class="button" href="{{ ref . "join" }}">
               <strong>Join Us</strong>
             </a>
           </div>

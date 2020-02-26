@@ -3,37 +3,39 @@
     {{ $pages := .Resources.ByType "page" }}
 
     {{ range sort $pages "Params.weight" }}
-      {{ if .Params.raw }}
+      <!-- Just render the raw content from the file with no wrapping -->
+      {{ if eq .Params.homeType "raw" }}
         {{ .Content }}
-      {{ else }}
-        <section class="section">
+      {{ end }}
+      
+      <!-- Render the content in a section container. This has a special case for markdown content -->
+      {{ if eq .Params.homeType "section" }}
+        <section class="section"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
           <div class="container">
-            {{ if .Params.markdown }}
-            <div class="columns is-desktop">
-              <div class="column is-two-thirds is-offset-2">
-                  <h2 class="title">{{ .Title }}</h2>
-                  <div class="content">{{ .Content }}</div>
-                </div>
-              </div>
+            {{ if .Title }}<h2 class="title">{{ .Title }}</h2>{{ end }}
+            {{ if eq .File.Ext "md" }}
+              <div class="content">{{ .Content }}</div>
             {{ else }}
-              {{ if .Title }}<h2 class="title">{{ .Title }}</h2>{{ end }}
               {{ .Content }}
             {{ end }}
           </div>
         </section>
       {{ end }}
+
+      <!-- Special case for the contact form so we can render the partial -->
+      {{ if eq .Params.homeType "contactUs" }}
+        <section class="section"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
+          <div class="container">
+            <div class="columns is-desktop">
+              <div class="column is-two-thirds is-offset-2">
+                <h2 class="title">{{ .Title }}</h2>
+                <div class="content">{{ .Content }}</div>
+                {{ partial "contact-form" }}
+              </div>
+            </div>
+          </div>
+        </section>
+      {{ end }}
     {{ end }}
   {{ end }}
-
-  <section class="section">
-    <div class="container">
-      <div class="columns is-desktop">
-        <div class="column is-two-thirds is-offset-2">
-          <h2 class="title">Contact Us</h2>
-          
-          {{ partial "contact-form" }}
-        </div>
-      </div>
-    </div>
-  </div>
 {{ end }}

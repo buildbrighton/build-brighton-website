@@ -1,7 +1,8 @@
 ---
+anchor: about-us
 title: About Us
 headless: true
-markdown: true
+homeType: section
 weight: 10
 ---
 

@@ -1,6 +1,7 @@
 
 {{ $menu := resources.Get "js/menu.js" }}
-{{ .Scratch.Set "js-bundle" (slice $menu | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint "sha512") }}
+{{ $anchorScroll := resources.Get "js/anchorScroll.js" }}
+{{ .Scratch.Set "js-bundle" (slice $menu $anchorScroll | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint "sha512") }}
 
 <footer class="footer">
   <div class="content has-text-centered">

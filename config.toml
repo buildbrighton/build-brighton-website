@@ -2,3 +2,6 @@ baseURL = "https://buildbrighton.com/"
 languageCode = "en-gb"
 title = "Build Brighton"
 enableRobotsTXT = true
+
+[params]
+bbmsURL = "https://bbms.buildbrighton.com/"
