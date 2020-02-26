@@ -1,12 +1,13 @@
-
-{{ $menu := resources.Get "js/menu.js" }}
-{{ $anchorScroll := resources.Get "js/anchorScroll.js" }}
-{{ .Scratch.Set "js-bundle" (slice $menu $anchorScroll | resources.Concat "js/bundle.js" | resources.Minify | resources.Fingerprint "sha512") }}
-
 <footer class="footer">
   <div class="content has-text-centered">
     
   </div>
 </footer>
 
-<script src='{{ (.Scratch.Get "js-bundle").Permalink }}' integrity='{{ (.Scratch.Get "js-bundle").Data.Integrity }}' async></script>
+{{ $menu := resources.Get "js/menu.js" | resources.Minify }}
+{{ $secureMenu := $menu | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureMenu.Permalink }}"></script>
+
+{{ $anchorScroll := resources.Get "js/anchorScroll.js" | resources.Minify }}
+{{ $secureAnchorScroll := $anchorScroll | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $secureAnchorScroll.Permalink }}"></script>
