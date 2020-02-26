@@ -1,24 +1,11 @@
 {{ define "main" }}
-  <!-- Homepage hero -->
-  {{ with .Site.GetPage "/home" }}
-    {{ with .Resources.GetMatch "hero.md" }}
-      <div class="container">
-        <section class="hero is-light homepage-hero">
-          <div class="hero-body">
-            <p class="slogan">
-              {{ .Plain }}
-            </p>
-          </div>
-        </section>
-      </div>
-    {{ end }}
-  {{ end }}
-
   {{ with .Site.GetPage "/home" }}
     {{ $pages := .Resources.ByType "page" }}
 
     {{ range sort $pages "Params.weight" }}
-      {{ if ne .Name "hero.md" }}
+      {{ if .Params.raw }}
+        {{ .Content }}
+      {{ else }}
         <section class="section">
           <div class="container">
             {{ if .Params.markdown }}
@@ -29,7 +16,7 @@
                 </div>
               </div>
             {{ else }}
-              <h2 class="title">{{ .Title }}</h2>
+              {{ if .Title }}<h2 class="title">{{ .Title }}</h2>{{ end }}
               {{ .Content }}
             {{ end }}
           </div>
