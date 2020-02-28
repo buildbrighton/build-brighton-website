@@ -1,6 +1,7 @@
 ---
 title: Contact Us
 anchor: "contact-us"
+navbarTitle: Contact
 headless: true
 homeType: contactUs
 weight: 100

@@ -19,7 +19,11 @@
           {{ range sort $pages "Params.weight" }}
             {{ if .Params.anchor }}
               <a class="navbar-item" href="/#{{ .Params.anchor }}">
-                {{ .Title }}
+                {{ if .Params.navbarTitle }}
+                  {{ .Params.navbarTitle }}
+                {{ else }}
+                  {{ .Title }}
+                {{ end }}
               </a>
             {{ end }}
           {{ end }}

@@ -1,6 +1,7 @@
 ---
 anchor: about-us
 title: About Us
+navbarTitle: About
 headless: true
 homeType: section
 weight: 10
