@@ -26,13 +26,9 @@
       {{ if eq .Params.homeType "contactUs" }}
         <section class="section"{{ with .Params.anchor }} id="{{ . }}"{{ end }}>
           <div class="container">
-            <div class="columns is-desktop">
-              <div class="column is-two-thirds is-offset-2">
-                <h2 class="title">{{ .Title }}</h2>
-                <div class="content">{{ .Content }}</div>
-                {{ partial "contact-form" }}
-              </div>
-            </div>
+            <h2 class="title">{{ .Title }}</h2>
+            <div class="content">{{ .Content }}</div>
+            {{ partial "contact-form" }}
           </div>
         </section>
       {{ end }}

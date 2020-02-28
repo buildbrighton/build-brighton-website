@@ -4,4 +4,5 @@ title = "Build Brighton"
 enableRobotsTXT = true
 
 [params]
-bbmsURL = "https://bbms.buildbrighton.com/"
+bbmsHome = "https://bbms.buildbrighton.com/"
+bbmsJoin = "https://bbms.buildbrighton.com/register"

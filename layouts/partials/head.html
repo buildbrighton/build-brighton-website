@@ -1,6 +1,10 @@
 {{ $options := (dict "outputStyle" "compressed") }}
-{{ $sass := resources.Get "css/site.sass" }}
-{{ .Scratch.Set "sass" ($sass | resources.ToCSS $options | resources.Minify | resources.PostCSS | resources.Fingerprint "sha512") }}
+{{ $sass := resources.Get "css/site.sass" | resources.ToCSS $options | resources.Minify }}
+{{ if eq hugo.Environment "production" }}
+  {{ .Scratch.Set "sass" ($sass | resources.PostCSS | resources.Fingerprint "sha512") }}
+{{ else }}
+  {{ .Scratch.Set "sass" ($sass | resources.Fingerprint "sha512") }}
+{{ end }}
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
