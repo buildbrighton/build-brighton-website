@@ -6,3 +6,9 @@ enableRobotsTXT = true
 [params]
 bbmsHome = "https://bbms.buildbrighton.com/"
 bbmsJoin = "https://bbms.buildbrighton.com/register"
+githubRepo = "https://github.com/matt-oakes/build-brighton-website"
+instagram = "https://www.instagram.com/buildbrighton"
+facebook = "https://www.facebook.com/BuildBrighton"
+twitter = "https://twitter.com/buildbrighton"
+googleMaps = "https://goo.gl/maps/EuPPHeV1ddeLD9R57"
+email = "info@buildbrighton.com"

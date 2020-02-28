@@ -1,13 +1,53 @@
 <footer class="footer">
-  <div class="content has-text-centered">
-    
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+        <a href="{{ .Site.Params.instagram }}" aria-label="Instagram">
+          <span class="icon">
+            <i class="bbicon-instagram" aria-hidden="true"></i>
+          </span>
+        </a>
+        
+        <a href="{{ .Site.Params.facebook }}" aria-label="Facebook">
+          <span class="icon">
+            <i class="bbicon-facebook" aria-hidden="true"></i>
+          </span>
+        </a>
+        
+        <a href="{{ .Site.Params.twitter }}" aria-label="Twitter">
+          <span class="icon">
+            <i class="bbicon-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+        
+        <a href="{{ .Site.Params.googleMaps }}" aria-label="Google Maps">
+          <span class="icon">
+            <i class="bbicon-map" aria-hidden="true"></i>
+          </span>
+        </a>
+        
+        <a href="mailto:{{ .Site.Params.email }}" aria-label="Email">
+          <span class="icon">
+            <i class="bbicon-email" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+
+      <div class="column">
+        <p class="content has-text-right-tablet">
+          <a href="{{ .Site.Params.githubRepo }}">
+            <small>Edit this website on Github</small>
+          </a>
+        </p>
+      </div>
+    </div>
   </div>
 </footer>
 
 {{ $menu := resources.Get "js/menu.js" | resources.Minify }}
 {{ $secureMenu := $menu | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureMenu.Permalink }}"></script>
+<script type="text/javascript" src="{{ $secureMenu.Permalink }}" async></script>
 
 {{ $anchorScroll := resources.Get "js/anchorScroll.js" | resources.Minify }}
 {{ $secureAnchorScroll := $anchorScroll | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureAnchorScroll.Permalink }}"></script>
+<script type="text/javascript" src="{{ $secureAnchorScroll.Permalink }}" async></script>

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'bbicons';
+  src:  url('../fonts/bbicons.eot?257oab');
+  src:  url('../fonts/bbicons.eot?257oab#iefix') format('embedded-opentype'),
+    url('../fonts/bbicons.ttf?257oab') format('truetype'),
+    url('../fonts/bbicons.woff?257oab') format('woff'),
+    url('../fonts/bbicons.svg?257oab#bbicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="bbicon-"], [class*=" bbicon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'bbicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bbicon-map:before {
+  content: "\f041";
+}
+.bbicon-facebook:before {
+  content: "\f082";
+}
+.bbicon-twitter:before {
+  content: "\f099";
+}
+.bbicon-email:before {
+  content: "\f0e0";
+}
+.bbicon-instagram:before {
+  content: "\f16d";
+}

@@ -15,4 +15,4 @@ Please see the [contributing guide](/CONTRIBUTING.md).
 
 ## License
 
-The library is released under the MIT license. For more information see [`LICENSE`](/LICENSE).
+The website source code is released under the MIT license. For more information see [`LICENSE`](/LICENSE).
