@@ -12,3 +12,6 @@ facebook = "https://www.facebook.com/BuildBrighton"
 twitter = "https://twitter.com/buildbrighton"
 googleMaps = "https://goo.gl/maps/EuPPHeV1ddeLD9R57"
 email = "info@buildbrighton.com"
+
+[taxonomies]
+room = "rooms"

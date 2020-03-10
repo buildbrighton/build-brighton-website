@@ -46,8 +46,8 @@
 
 {{ $menu := resources.Get "js/menu.js" | resources.Minify }}
 {{ $secureMenu := $menu | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureMenu.Permalink }}" async></script>
+<script type="text/javascript" src="{{ $secureMenu.Permalink }}"></script>
 
 {{ $anchorScroll := resources.Get "js/anchorScroll.js" | resources.Minify }}
 {{ $secureAnchorScroll := $anchorScroll | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $secureAnchorScroll.Permalink }}" async></script>
+<script type="text/javascript" src="{{ $secureAnchorScroll.Permalink }}"></script>
