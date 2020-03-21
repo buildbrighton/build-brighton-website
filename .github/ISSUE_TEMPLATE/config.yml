@@ -1,0 +1,4 @@
+contact_links:
+  - name: Fix Something Yourself!
+    url: https://github.com/buildbrighton/build-brighton-website/blob/master/CONTRIBUTING.md
+    about: Rather than just reporting them, help us out by making a pull request to fix any typos or make other small changes. Click here to read the contribution guide. It's easy and no programming experience is required!
