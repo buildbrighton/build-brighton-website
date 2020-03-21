@@ -1,7 +1,7 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <section class="container">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{ $.Site.Home.Permalink }}">
+      <a class="navbar-item" href="{{ $.Site.Home.RelPermalink }}">
         <img alt="Build Brighton - Makerspace" src="/img/build-brighton-logo.png">
       </a>
       <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="mainNavbar">
@@ -36,7 +36,7 @@
             <a class="button is-primary" href="{{ .Site.Params.bbmsHome }}">
               Members Area
             </a>
-            <a class="button" href="{{ ref . "join" }}">
+            <a class="button" href="{{ relref . "join" }}">
               Join
             </a>
           </div>
