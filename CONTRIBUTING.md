@@ -2,12 +2,6 @@
 
 ## Editing the Website Content
 
-TODO
-
-## Modifying the source code
-
-If you need to modify the website more extensively, you can edit the code directly.
-
 ### First Time Setup
 
 * **[Install Hugo >= 0.65](https://gohugo.io/getting-started/installing/)**: This is used to generate the website.
