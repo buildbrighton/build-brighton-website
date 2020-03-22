@@ -13,3 +13,36 @@
 <link rel="manifest" href="/site.webmanifest">
 
 {{ template "_internal/opengraph.html" . }}
+
+<script type='application/ld+json'>
+{
+    "@context": "http://www.schema.org",
+    "@type": "Organization",
+    "name": "Build Brighton",
+    "url": "https://buildbrighton.com",
+    "email": "{{ .Site.Params.email }}",
+    "logo": "https://buildbrighton.com/img/build-brighton-logo.png",
+    "description": "{{ .Site.Params.description }}",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rodhus Studios (back entrance), Freehold Terrace",
+        "addressLocality": "Brighton",
+        "postalCode": "BN2 4AB",
+        "addressCountry": "United Kingdom"
+    },
+    "location": {
+        "@type": "Place",
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "50.83844574487016",
+            "longitude": "-0.12688994407653809"
+        }
+    },
+    "sameAs": [
+        "https://www.instagram.com/buildbrighton",
+        "https://www.facebook.com/BuildBrighton",
+        "https://twitter.com/buildbrighton",
+        "https://goo.gl/maps/EuPPHeV1ddeLD9R57"
+    ]
+}
+</script>
