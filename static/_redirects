@@ -1,3 +1,7 @@
 # Redirect default Netlify subdomain to primary domain
 http://build-brighton-website.netlify.com/* http://buildbrighton.com/:splat 301!
 https://build-brighton-website.netlify.com/* https://buildbrighton.com/:splat 301!
+
+# The www subdomain to the primary domain
+http://www.buildbrighton.com/* http://buildbrighton.com/:splat 301!
+https://www.buildbrighton.com/* https://buildbrighton.com/:splat 301!
