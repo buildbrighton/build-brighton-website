@@ -1,6 +1,7 @@
 baseURL = "https://buildbrighton.com/"
 languageCode = "en-gb"
 title = "Build Brighton"
+description = "A communal workshop and collective in central Brighton of over 100 makers, designers, tinkerers, hobbyists, engineers, and artists who love to build stuff"
 enableRobotsTXT = true
 
 [params]
@@ -12,6 +13,3 @@ facebook = "https://www.facebook.com/BuildBrighton"
 twitter = "https://twitter.com/buildbrighton"
 googleMaps = "https://goo.gl/maps/EuPPHeV1ddeLD9R57"
 email = "info@buildbrighton.com"
-
-[taxonomies]
-room = "rooms"
