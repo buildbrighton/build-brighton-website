@@ -4,7 +4,7 @@
 
 ### First Time Setup
 
-* **[Install Hugo >= 0.65](https://gohugo.io/getting-started/installing/)**: This is used to generate the website.
+* **[Install Hugo >= 0.65](https://gohugo.io/getting-started/installing/)**: This is used to generate the website. _(Note: The "extended" version of Hugo is needed)_
 * **[Install Node]()**: This is used to install a few small dependencies through NPM.
 * **Checkout the code**: Run `git clone ...` in the folder where you want the code to live.
 * **Install NPM dependencies**: Run `npm install` in the root of the project.
