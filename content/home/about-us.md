@@ -12,9 +12,9 @@ community of makers who help each other to make stuff and understand techniques.
 
 We are accepting applications for membership, but before applying to join, please come along to an open evening, to make sure the space meets your needs and to find out more.
 
-Open Evenings are usually held alternate Thursdays 6-8:30pm. If you cannot make it on Thursday evenings, let us know and we will try and work something out. 
+Open Evenings are usually held alternate Thursdays at 6 pm. If you cannot make it on Thursday evenings, let us know and we will try and work something out. 
 
-You can arrange to attend an Open Evening or put any questions by emailing us at: info@buildbrighton.com
+You can arrange to attend an Open Evening or put any questions by emailing us at: open@buildbrighton.com
 
 At an Open Evening we will show you round, answer your questions, explain how the club works and cover how you apply for membership. 
 
